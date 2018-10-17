@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+spec: 
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+  - name: http
+    port: 80  # port of pod
+    nodePort: 30001 #port forawrding(port of node)
+    protocal: TCP
